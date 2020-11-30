@@ -1,4 +1,4 @@
-package nz_azconnector
+package main
 
 import (
     "flag"
