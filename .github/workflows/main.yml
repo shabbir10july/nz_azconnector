@@ -4,23 +4,23 @@ jobs:
     name: release linux/386
     runs-on: ubuntu-latest
     steps:
-      - name: Check out source code
-        uses: actions/checkout@main
-      - name: Go Release Binary
-        uses: abhishekjog/go-release.action@vtemp
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GOARCH: "386"
-          GOOS: linux
+    - name: Check out source code
+      uses: actions/checkout@main
+    - name: Go Release Binary
+      uses: abhishekjog/go-release.action@vtemp
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GOARCH: "386"
+        GOOS: linux
   release-linux-amd64:
     name: release linux/amd64
     runs-on: ubuntu-latest
     steps:
-      - name: Check out source code
-        uses: actions/checkout@main
-      - name: Go Release Binary
-        uses: abhishekjog/go-release.action@vtemp
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GOARCH: amd64
-          GOOS: linux
+    - name: Check out source code
+      uses: actions/checkout@main
+    - name: Go Release Binary
+      uses: abhishekjog/go-release.action@vtemp
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GOARCH: amd64
+        GOOS: linux
