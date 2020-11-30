@@ -7,7 +7,7 @@ jobs:
       - name: Check out source code
         uses: actions/checkout@main
       - name: Go Release Binary
-        uses: ngs/go-release.action@v1.0.2
+        uses: abhishekjog/go-release.action@vtemp
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GOARCH: "386"
@@ -18,10 +18,8 @@ jobs:
     steps:
       - name: Check out source code
         uses: actions/checkout@main
-      - name: Build
-        run: go build -o nz_azconnector nz_azconnector.go
       - name: Go Release Binary
-        uses: ngs/go-release.action@v1.0.2
+        uses: abhishekjog/go-release.action@vtemp
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GOARCH: amd64
