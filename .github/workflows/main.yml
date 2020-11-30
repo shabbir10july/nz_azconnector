@@ -6,6 +6,10 @@ jobs:
     steps:
       - name: Check out source code
         uses: actions/checkout@main
+      - name: Install dependencies
+        run: |
+          go version
+          go get -u github.com/Azure/azure-storage-blob-go/azblob
       - name: Build
         run: go build -o nz_azconnector nz_azconnector.go
       - name: Go Release Binary
